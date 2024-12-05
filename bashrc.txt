@@ -30,8 +30,8 @@ alias dl='cd ~/downloads'       # Go to Downloads directory
 alias desk='cd ~/desktop'       # Go to Desktop directory
 alias web='cd ~/web'            # Navigate to web server directory
 alias op='sudo su'              # Open a root shell
-alias upgrade='apt update && apt upgrade -y' #updates and upgrades system with the apt package manager
-alias update='apt update && apt upgrade -y'  #updates and upgrades system with the apt package manager
+alias upgrade='nala update && nala upgrade -y' #updates and upgrades system with the nala package manager
+alias update='nala update && nala upgrade -y'  #updates and upgrades system with the nala package manager
 
 # Networking
 alias myip='curl ifconfig.me'   # Get your external IP address
