@@ -1,5 +1,4 @@
-# Blissful Bash
-## A Clean and Minimal Bash Configuration
+Blissful Bash: A Clean and Minimal Bash Configuration
 
 Blissful Bash is a streamlined and efficient .bashrc configuration designed for users who prefer a clean, functional, and minimal Bash experience. It includes useful aliases, custom functions, and configurations for system information, Docker, networking, and more.
 
@@ -63,12 +62,28 @@ Before using this configuration, you will need to install the following dependen
      ```
    - Alternatively, you can follow the official instructions here: https://github.com/dylanaraps/fastfetch
 
-Once you have both dependencies installed, you can simply copy the `default.bashrc` or the text from `bashrc.txt` into your (`~/.bashrc`).
+3. **Zoxide** (Optional, for faster directory navigation):
+   - Zoxide is a smarter `cd` command. To install it, run:
+     ```bash
+     curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+     ```
+   - Follow the instructions to add it to your shell configuration.
+
+4. **Nala** (Optional, for an improved `apt` experience):
+   - Nala is a frontend for `apt` with better performance. Install it with:
+     ```bash
+     sudo apt install nala
+     ```
+   - Use Nala instead of `apt` for an enhanced package management experience.
+
+Once you have all the dependencies installed, simply copy the `default.bashrc` or the text from `bashrc.txt` into your (`~/.bashrc`).
 
 Credits
 -------
 - FastFetch: For fast and elegant system information display.
 - Oh My Posh: For a beautiful shell theme (requires Oh My Posh installation).
+- Zoxide: For improved directory navigation.
+- Nala: For a faster and better package management experience.
 
 License
 -------
