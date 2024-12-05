@@ -4,16 +4,17 @@
 
 # Blissful-Bash: A clean and minimal Bash configuration
 
+# Essential Colors
+RED='\033[0;31m'        # Red
+YELLOW='\033[1;33m'     # Yellow
+GREEN='\033[0;32m'      # Green
+BLUE='\033[0;34m'       # Blue
+NC='\033[0m'            # No Color (reset)
+
 echo -e "${GREEN}🔹Access Granted🔹${NC}"
 sleep 1
 echo -e "${BLUE}🔹Welcome Back ${USER}🔹${NC}"
 sleep 1
-
-# Essential Colors
-RED='\033[0;31m'        # Red
-GREEN='\033[0;32m'      # Green
-BLUE='\033[0;34m'       # Blue
-NC='\033[0m'            # No Color (reset)
 
 # FastFetch and Oh My Posh configuration
 eval "$(oh-my-posh init bash --config ~/themes/peru.omp.json)"
@@ -30,7 +31,7 @@ alias dl='cd ~/downloads'       # Go to Downloads directory
 alias desk='cd ~/desktop'       # Go to Desktop directory
 alias web='cd ~/web'            # Navigate to web server directory
 alias op='sudo su'              # Open a root shell
-alias upgrade='sudo apt update && sudo apt upgrade -y'  # Updates and upgrades system
+alias upgrade='nala update && nala upgrade -y'  # Updates and upgrades system
 alias update='upgrade'         # Alias for upgrade command
 
 # Networking
@@ -59,7 +60,7 @@ alias diskfree='du -ah --max-depth=1 | sort -h'  # Show disk usage in current di
 # Editing Configuration Files
 alias editrc='nano ~/.bashrc && source ~/.bashrc && echo -e "${YELLOW}Successfully reloaded .bashrc!${NC}"'  # Quick edit of .bashrc
 
-# Function to replace apt-get with apt, even when using sudo
+# Function to replace apt-get with apt, using Nala where applicable
 apt-get() {
     # Check if the command is being called with sudo
     if [[ "$EUID" -eq 0 ]]; then
@@ -71,16 +72,16 @@ apt-get() {
     # Determine which apt-get command is being run
     case "$1" in
         update)
-            echo "Running: sudo apt update"
-            sudo apt update || echo "Nala update failed."
+            echo "Running: nala update"
+            sudo nala update || echo "Nala update failed."
             ;;
         upgrade)
-            echo "Running: sudo apt upgrade -y"
-            sudo apt upgrade -y || echo "Nala upgrade failed."
+            echo "Running: nala upgrade -y"
+            sudo nala upgrade -y || echo "Nala upgrade failed."
             ;;
         install|remove|autoremove)
-            echo "Running: sudo apt $1 ${@:2}"
-            sudo apt "$1" "${@:2}" || echo "Nala $1 failed."
+            echo "Running: sudo nala $1 ${@:2}"
+            sudo nala "$1" "${@:2}" || echo "Nala $1 failed."
             ;;
         *)
             echo "Running original apt-get command"
