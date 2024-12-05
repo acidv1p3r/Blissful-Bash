@@ -1,4 +1,4 @@
-Blissful Bash
+#Blissful Bash
 A Clean and Minimal Bash Configuration
 
 Blissful Bash is a streamlined and efficient .bashrc configuration designed for users who prefer a clean, functional, and minimal Bash experience. It includes useful aliases, custom functions, and configurations for system information, Docker, networking, and more.
