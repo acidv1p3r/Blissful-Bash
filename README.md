@@ -63,7 +63,7 @@ Before using this configuration, you will need to install the following dependen
      ```
    - Alternatively, you can follow the official instructions here: https://github.com/dylanaraps/fastfetch
 
-Once you have both dependencies installed, you can simply copy the `.bashrc` from this repository into your home directory (`~/.bashrc`).
+Once you have both dependencies installed, you can simply copy the `bashrc.txt` from this repository into your (`~/.bashrc`).
 
 Credits
 -------
