@@ -13,7 +13,7 @@ sleep 1
 echo -e "${GREEN}🔹Access Granted🔹${NC}"
 
 # FastFetch and Oh My Posh configuration
-eval "$(oh-my-posh init bash --config ~/themes/sonicboom_dark.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/sonicboom_dark.omp.json)"
 eval "$(zoxide init bash)"
 
 sleep 1
