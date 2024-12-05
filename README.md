@@ -45,6 +45,26 @@ System Information
 - uptime: Display system uptime in a user-friendly format.
 - sysinfo: Show detailed system information using FastFetch.
 
+Installation
+------------
+Before using this configuration, you will need to install the following dependencies:
+
+1. **Oh My Posh**:
+   - Follow the installation instructions for **Oh My Posh** here: https://ohmyposh.dev/docs/
+   - Ensure it’s installed and configured properly to enable the shell theme features.
+
+2. **FastFetch**:
+   - Install **FastFetch** to display system information with the following command:
+     ```bash
+     git clone https://github.com/dylanaraps/fastfetch.git
+     cd fastfetch
+     make
+     sudo make install
+     ```
+   - Alternatively, you can follow the official instructions here: https://github.com/dylanaraps/fastfetch
+
+Once you have both dependencies installed, you can simply copy the `.bashrc` from this repository into your home directory (`~/.bashrc`).
+
 Credits
 -------
 - FastFetch: For fast and elegant system information display.
