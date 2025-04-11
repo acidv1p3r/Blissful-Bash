@@ -75,7 +75,9 @@ Before using this configuration, you will need to install the following dependen
      sudo apt install nala
      ```
    - Use Nala instead of `apt` for an enhanced package management experience.
-
+     
+5. **Starship** for root basrc curl -sS https://starship.rs/install.sh | sh
+   
 Once you have all the dependencies installed, simply copy the `default.bashrc` or the text from `bashrc.txt` into your (`~/.bashrc`).
 
 Credits
