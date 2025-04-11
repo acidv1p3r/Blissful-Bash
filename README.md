@@ -7,7 +7,7 @@ It’s designed for those who prefer a functional and efficient terminal experie
 Features
 --------
 - Two Separate Configurations:
-  - `user.bashrc` for daily usage with optional Oh My Posh and Zoxide support
+  - `user.profile` for daily usage with optional Oh My Posh and Zoxide support
   - `root.bashrc` with Starship prompt and elevated tool access
 
 - Convenient Aliases:
