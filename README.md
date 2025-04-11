@@ -4,55 +4,55 @@ Blissful Bash provides two lightweight, organized `.bashrc` setups—one for reg
 
 It’s designed for those who prefer a functional and efficient terminal experience with minimal clutter.
 
-Features
+## Features
 --------
-- Two Separate Configurations:
+- **Two Separate Configurations:**
   - `user.profile` for daily usage with optional Oh My Posh and Zoxide support
   - `root.bashrc` with Starship prompt and elevated tool access
 
-- Convenient Aliases:
-  - System Management: update, upgrade
-  - Docker Shortcuts: dps, di, dockerclean, dc
-  - Networking Tools: myip, ports, fdns, pingg
-  - File Management: ll, la, c
+- **Convenient Aliases:**
+  - **System Management:** update, upgrade
+  - **Docker Shortcuts:** dps, di, dockerclean, dc
+  - **Networking Tools:** myip, ports, fdns, pingg
+  - **File Management:** ll, la, c
 
-- Prompt Customization:
-  - User: Clean PS1 with username, host, and path in color
-  - Root: Styled Starship prompt for fast and readable command context
+- **Prompt Customization:**
+  - **User:** Clean PS1 with username, host, and path in color
+  - **Root:** Styled Starship prompt for fast and readable command context
 
-- Docker Integration:
+- **Docker Integration:**
   - Docker aliases for containers, images, and cleanup
   - Docker autocompletions enabled if installed
 
-System Commands
+## System Commands
 ---------------
-- c: Clear the terminal
-- d: Change directory (cd)
-- la: List all files, including hidden ones
-- ll: Long listing of all files
-- upgrade: Update and upgrade the system using apt
-- update: Alias for upgrade
+- **c:** Clear the terminal
+- **d:** Change directory (cd)
+- **la:** List all files, including hidden ones
+- **ll:** Long listing of all files
+- **upgrade:** Update and upgrade the system using apt
+- **update:** Alias for upgrade
 
-Networking Commands
+## Networking Commands
 -------------------
-- myip: Get your external IP address
-- pingg: Ping Google to test internet
-- ports: List all open ports (ss-based)
-- fdns: Flush DNS cache
+- **myip:** Get your external IP address
+- **pingg:** Ping Google to test internet
+- **ports:** List all open ports (ss-based)
+- **fdns:** Flush DNS cache
 
-Docker Commands
+## Docker Commands
 ---------------
-- dockerclean: Remove unused Docker containers, images, and volumes
-- dc: Alias for docker-compose
-- dps: List running Docker containers
-- di: List Docker images
+- **dockerclean:** Remove unused Docker containers, images, and volumes
+- **dc:** Alias for docker-compose
+- **dps:** List running Docker containers
+- **di:** List Docker images
 
-System Information
+## System Information
 ------------------
-- uptime: Show current system uptime
-- sysinfo: Display system stats using FastFetch (if installed)
+- **uptime:** Show current system uptime
+- **sysinfo:** Display system stats using FastFetch (if installed)
 
-Installation
+## Installation
 ------------
 Before using these configurations, install the following tools:
 
@@ -88,7 +88,7 @@ Before using these configurations, install the following tools:
      curl -sS https://starship.rs/install.sh | sh
      ```
 
-Usage
+## Usage
 -----
 Once dependencies are installed:
 
