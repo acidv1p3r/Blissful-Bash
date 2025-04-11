@@ -1,7 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# See /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # Add color variables
 GREEN='\033[0;32m'        # Green
 YELLOW='\033[1;33m'       # Yellow
@@ -12,10 +8,10 @@ RED='\033[0;31m'          # Red (for errors)
 sleep 1
 echo -e "${GREEN}🔹Access Granted🔹${NC}"
 
-# FastFetch and Oh My Posh configuration
-eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/sonicboom_dark.omp.json)"
+# Starship and zoxide configuration
+eval "$(starship init bash)"
 eval "$(zoxide init bash)"
-eval "fastfetch"
+
 
 sleep 1
 echo -e "${BLUE}🔹Welcome Back ${USER}🔹${NC}"
