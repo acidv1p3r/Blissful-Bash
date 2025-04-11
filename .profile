@@ -1,4 +1,3 @@
-
 # Add color variables
 GREEN='\033[0;32m'   # Green
 CYAN='\033[0;36m'    # Cyan
