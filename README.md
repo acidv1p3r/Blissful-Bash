@@ -1,92 +1,100 @@
-# Blissful Bash: A Clean and Minimal Bash Configuration
+# Blissful Bash: Clean and Minimal Bash Configurations for User and Root
 
-Blissful Bash is a streamlined and efficient .bashrc configuration designed for users who prefer a clean, functional, and minimal Bash experience. It includes useful aliases, custom functions, and configurations for system information, Docker, networking, and more.
+Blissful Bash provides two lightweight, organized `.bashrc` setups—one for regular users and one for the root user. Each version is optimized for its environment, including helpful aliases, prompt enhancements, Docker tools, and system commands.
+
+It’s designed for those who prefer a functional and efficient terminal experience with minimal clutter.
 
 Features
 --------
-- Convenient Aliases: Shortcuts for commonly used commands:
-  - System Management: update, upgrade
-  - Docker Shortcuts: dps, di, dockerclean
-  - Networking Tools: myip, ports, fdns
-  - File Management: ll, la, diskfree
+- Two Separate Configurations:
+  - `user.bashrc` for daily usage with optional Oh My Posh and Zoxide support
+  - `root.bashrc` with Starship prompt and elevated tool access
 
-- Prompt Customization: The prompt is configured to display the username, hostname, and current directory in color. Modify the colors or structure by editing the PS1 variable in the .bashrc.
+- Convenient Aliases:
+  - System Management: update, upgrade
+  - Docker Shortcuts: dps, di, dockerclean, dc
+  - Networking Tools: myip, ports, fdns, pingg
+  - File Management: ll, la, c
+
+- Prompt Customization:
+  - User: Clean PS1 with username, host, and path in color
+  - Root: Styled Starship prompt for fast and readable command context
 
 - Docker Integration:
-  - If Docker is installed, the configuration will enable Docker command autocompletions.
-  - Adjust Docker aliases as needed.
+  - Docker aliases for containers, images, and cleanup
+  - Docker autocompletions enabled if installed
 
 System Commands
 ---------------
-- c: Clear the terminal.
-- d: Change directory (cd).
-- la: List files, including hidden ones.
-- ll: Detailed listing of files, including hidden files.
-- upgrade: Update and upgrade the system using apt.
-- update: Alias for upgrade.
+- c: Clear the terminal
+- d: Change directory (cd)
+- la: List all files, including hidden ones
+- ll: Long listing of all files
+- upgrade: Update and upgrade the system using apt
+- update: Alias for upgrade
 
 Networking Commands
 -------------------
-- myip: Fetch your external IP address.
-- pingg: Ping Google to check connectivity.
-- ports: List all open ports.
-- fdns: Flush the DNS cache.
+- myip: Get your external IP address
+- pingg: Ping Google to test internet
+- ports: List all open ports (ss-based)
+- fdns: Flush DNS cache
 
 Docker Commands
 ---------------
-- dockerclean: Prune unused Docker objects (volumes, images, etc.).
-- dc: Short for docker-compose.
-- dps: List running Docker containers.
-- di: List Docker images.
+- dockerclean: Remove unused Docker containers, images, and volumes
+- dc: Alias for docker-compose
+- dps: List running Docker containers
+- di: List Docker images
 
 System Information
 ------------------
-- uptime: Display system uptime in a user-friendly format.
-- sysinfo: Show detailed system information using FastFetch.
+- uptime: Show current system uptime
+- sysinfo: Display system stats using FastFetch (if installed)
 
 Installation
 ------------
-Before using this configuration, you will need to install the following dependencies:
+Before using these configurations, install the following tools:
 
-1. **Oh My Posh**:
-   - Follow the installation instructions for **Oh My Posh** here: https://ohmyposh.dev/docs/
-   - Ensure it’s installed and configured properly to enable the shell theme features.
+1. **Oh My Posh** (User only, optional):
+   - Install using the instructions at: https://ohmyposh.dev/docs/
+   - Configure your prompt if using this in `user.bashrc`.
 
 2. **FastFetch**:
-   - Install **FastFetch** to display system information with the following command:
+   - To install, run:
      ```bash
      git clone https://github.com/dylanaraps/fastfetch.git
      cd fastfetch
      make
      sudo make install
      ```
-   - Alternatively, you can follow the official instructions here: https://github.com/dylanaraps/fastfetch
+   - Or follow: https://github.com/dylanaraps/fastfetch
 
-3. **Zoxide** (Optional, for faster directory navigation):
-   - Zoxide is a smarter `cd` command. To install it, run:
+3. **Zoxide** (User only, optional):
+   - A faster way to jump around directories:
      ```bash
      curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
      ```
-   - Follow the instructions to add it to your shell configuration.
 
-4. **Nala** (Optional, for an improved `apt` experience):
-   - Nala is a frontend for `apt` with better performance. Install it with:
+4. **Nala** (Optional, better apt frontend):
+   - Install with:
      ```bash
      sudo apt install nala
      ```
-   - Use Nala instead of `apt` for an enhanced package management experience.
-     
-5. **Starship** for root basrc curl -sS https://starship.rs/install.sh | sh
-   
-Once you have all the dependencies installed, simply copy the `default.bashrc` or the text from `bashrc.txt` into your (`~/.bashrc`).
 
-Credits
--------
-- FastFetch: For fast and elegant system information display.
-- Oh My Posh: For a beautiful shell theme (requires Oh My Posh installation).
-- Zoxide: For improved directory navigation.
-- Nala: For a faster and better package management experience.
+5. **Starship** (Root only):
+   - Install with:
+     ```bash
+     curl -sS https://starship.rs/install.sh | sh
+     ```
 
-License
--------
-This configuration is open-source and available for personal or educational use.
+Usage
+-----
+Once dependencies are installed:
+
+- Copy `user.bashrc` to `~/.bashrc`
+- Copy `root.bashrc` to `/root/.bashrc`
+- Restart your terminal or run:
+  ```bash
+  source ~/.bashrc
+  sudo -i && source /root/.bashrc
