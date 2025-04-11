@@ -92,7 +92,7 @@ Before using these configurations, install the following tools:
 -----
 Once dependencies are installed:
 
-- Copy `user.bashrc` to `~/.bashrc`
+- Copy `.profile` to `~/home/userfolder/`
 - Copy `root.bashrc` to `/root/.bashrc`
 - Restart your terminal or run:
   ```bash
